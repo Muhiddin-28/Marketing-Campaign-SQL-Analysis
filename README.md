@@ -82,3 +82,60 @@ This project provides a structured SQL-based marketing analysis pipeline that tr
 - SQL Database (MySQL, PostgreSQL, SQL Server, etc.)
 - Database management tool (phpMyAdmin, pgAdmin, DBeaver, etc.)
 - Optional: Data visualization tool (Power BI, Tableau, Excel)
+
+## ⚙️ How to Use
+
+###  Load Data
+- All raw data files are stored in the `DATA` folder (`marketing_campaigns_dataset.csv`).
+- Import the dataset into your SQL database (PostgreSQL, MySQL, or SQL Server).
+
+Example (PostgreSQL):
+```sql
+COPY marketing_campaigns FROM 'path_to_file/marketing_campaigns.csv' DELIMITER ',' CSV HEADER;
+```
+
+##  Run SQL Scripts
+
+- Open the SQL Script folder and execute files in order:
+
+1. `01_data_cleaning_marketing_campaigns.sql `
+
+2. `02_ctr_by_channel.sql`
+
+3. `03_campaign_type_conversion.sql`
+
+4. `04_company_avg_roi.sql`
+
+5. `05_roi_by_channel.sql`
+
+6. `06_roi_by_segment.sql`
+
+7. `07_roi_engagement_by_location.sql`  
+
+8. `08_roi_by_duration.sql`
+
+9. `09_combined_channel_segment_analysis.sql`
+
+-Each script runs a specific part of the analysis (CTR, ROI, conversion rate, engagement, etc.).
+
+##  View Results
+
+- Run each script to generate query outputs in your SQL editor.
+
+- Export the results to Power BI, Tableau, or Excel for visualization.
+
+- Example:
+```sql
+SELECT * FROM roi_by_channel_results;
+```
+##  Optional Visualization
+
+- Connect your database to Power BI or Tableau.
+
+- Create charts for ROI by channel, conversion rate, and customer segment performance.
+
+##  Tips
+
+- Re-run the cleaning script (01_data_cleaning_marketing_campaigns.sql) whenever new data is added.
+
+- You can expand the analysis by editing 09_combined_channel_segment_analysis.sql.
