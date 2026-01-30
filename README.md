@@ -1,4 +1,4 @@
-# Marketing Campaign Performance Analysis (SQL Case Study)
+# Marketing Campaign Performance Analysis (SQL)
 
 ## Project Summary
 
